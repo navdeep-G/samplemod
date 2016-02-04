@@ -1,5 +1,5 @@
 init:
-	pip install -r requirements.txt --use-mirrors
+	pip install -r requirements.txt
 
 test:
 	nosetests tests
