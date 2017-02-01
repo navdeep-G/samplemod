@@ -9,7 +9,7 @@ class AdvancedTestSuite(unittest.TestCase):
     """Advanced test cases."""
 
     def test_thoughts(self):
-        sample.hmm()
+        self.assertIsNone(sample.hmm())
 
 
 if __name__ == '__main__':
