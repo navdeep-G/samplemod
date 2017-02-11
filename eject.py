@@ -6,7 +6,6 @@ import re
 import shutil
 
 import inquirer
-import fileinput
 
 nonempty = lambda _, x: re.match('.+', x)
 questions = [
