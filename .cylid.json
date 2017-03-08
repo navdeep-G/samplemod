@@ -1,0 +1,68 @@
+{
+   "name" : "example-python-project",
+   "environment" : {
+      "os" : "ubuntu_trusty",
+      "packages" : [
+         "git",
+         "python",
+         "python-pip"
+      ]
+   },
+   "sources" : [
+      {
+         "type" : "git",
+         "url" : "https://github.com/Cyclid/example-python-project.git"
+      }
+   ],
+   "stages" : [
+      {
+         "name" : "pip-install",
+         "steps" : [
+            {
+               "action" : "command",
+               "cmd" : "pip install -r requirements.txt",
+               "path" : "%{workspace}/example-python-project"
+            }
+         ]
+      },
+      {
+         "name" : "test",
+         "steps" : [
+            {
+               "action" : "command",
+               "cmd" : "nosetests --with-coverage --cover-xml tests",
+               "path" : "%{workspace}/example-python-project"
+            }
+         ]
+      },
+      {
+         "name" : "success",
+         "steps" : [
+            {
+               "action" : "log",
+               "message" : "Job %{organization}/%{job_name} (job #%{job_id}) completed successfully."
+            }
+         ]
+      },
+      {
+         "name" : "failure",
+         "steps" : [
+            {
+               "action" : "log",
+               "message" : "Job %{organization}/%{job_name} (job #%{job_id}) failed."
+            }
+         ]
+      }
+   ],
+   "sequence" : [
+      {
+         "stage" : "pip-install",
+         "on_failure" : "failure"
+      },
+      {
+         "stage" : "test",
+         "on_success" : "success",
+         "on_failure" : "failure"
+      }
+   ]
+}
