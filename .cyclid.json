@@ -5,6 +5,7 @@
       "packages" : [
          "git",
          "python",
+         "python-dev",
          "python-pip"
       ]
    },
@@ -32,6 +33,10 @@
                "action" : "command",
                "cmd" : "nosetests --with-coverage --cover-xml tests",
                "path" : "%{workspace}/example-python-project"
+            },
+            {
+              "action": "cobertura",
+              "path": "%{workspace}/example-python-project/coverage.xml"
             }
          ]
       },
@@ -61,8 +66,14 @@
       },
       {
          "stage" : "test",
-         "on_success" : "success",
          "on_failure" : "failure"
+      },
+      {
+        "stage": "failure",
+        "only_if": "%{cobertura_line_rate} < 90%"
+      },
+      {
+        "stage": "success"
       }
    ]
 }
