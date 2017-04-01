@@ -27,6 +27,16 @@
          ]
       },
       {
+         "name" : "lint",
+         "steps" : [
+            {
+               "action" : "command",
+               "cmd" : "flake8 sample/",
+               "path" : "%{workspace}/example-python-project"
+            }
+         ]
+      },
+      {
          "name" : "test",
          "steps" : [
             {
@@ -62,6 +72,10 @@
    "sequence" : [
       {
          "stage" : "pip-install",
+         "on_failure" : "failure"
+      },
+      {
+         "stage" : "lint",
          "on_failure" : "failure"
       },
       {
