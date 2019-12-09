@@ -19,7 +19,7 @@ setup(
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
     url='https://github.com/kennethreitz/samplemod',
-    license=license,
+    license='BSD-2-Clause',
     packages=find_packages(exclude=('tests', 'docs'))
 )
 
