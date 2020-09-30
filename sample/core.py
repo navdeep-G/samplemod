@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from . import helpers
 
+
 def get_hmm():
     """Get a thought."""
-    return 'hmmm...'
+    return "hmmm..."
 
 
 def hmm():
