@@ -3,7 +3,7 @@ Sample Module Repository
 
 This simple project is an example repo for Python projects.
 
-`Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
+`Learn more <https://web.archive.org/web/20201111230610/https://kenreitz.org/essays/repository-structure-and-python>`_.
 
 ---------------
 
