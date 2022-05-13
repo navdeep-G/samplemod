@@ -1,1 +1,4 @@
 include LICENSE
+# include following to manage src files more directly
+# adapt tests/context loader if you intend usage by adding 'src' to the path
+# recursive-include src/ *.py
