@@ -5,8 +5,6 @@ from google.oauth2 import service_account
 import json
 
 
-BIG_QUERY_PROJECT_ID = 'tranquil-tiger-399222'
-
 def read_yaml_file(filename):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(current_dir, filename)
@@ -29,7 +27,7 @@ if __name__ == "__main__":
         bigQueryCredentialsFile
     )
     bigQueryClient = bigquery.Client(
-        project=BIG_QUERY_PROJECT_ID,
+        project=bigQueryCredentialsFile['project_id'],
         credentials=credentials
     )
     result = bigQueryClient.query(
