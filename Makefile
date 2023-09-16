@@ -1,5 +1,2 @@
-init:
-	pip install -r requirements.txt
-
-test:
-	nosetests tests
+install:
+	pip3 install -r requirements.txt
