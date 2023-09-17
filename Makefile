@@ -1,2 +1,5 @@
 install:
-	pip3 install -r requirements.txt
+	pipenv install
+
+run:
+	python3 ./lib/main.py

@@ -1,4 +1,11 @@
 # POC
+
+# Setup
+- obtain they `keys.json` file
+- run `make install`
+- run `make run`
+
+# Plan
 ## Step 1
 
 - read yaml file into typescript script
