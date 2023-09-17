@@ -28,8 +28,7 @@ tables:
         description: "This is a description of column_6"
 embeddings:
   - name: "user"
-    properties:
-      - table_name: "table_1"
-        column_name: "column_1"
-      - table_name: "table_2"
-        column_name: "column_2"
+    table: "bigquery-public-data.austin_311.311_service_requests"
+    columns:
+      - name: "unique_key"
+      - name: "complaint_description"
