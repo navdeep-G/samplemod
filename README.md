@@ -2,6 +2,7 @@
 
 # Setup
 - obtain they `keys.json` file
+- create a `.env` file which is a copy of `.env.example` and fill in the values
 - run `make install`
 - run `make run`
 
