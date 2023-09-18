@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 pyyaml = "*"
 google-cloud-bigquery = "*"
+requests = "*"
+openai = "*"
+python-dotenv = "*"
+lancedb = "*"
 
 [dev-packages]
 

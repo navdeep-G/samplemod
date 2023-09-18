@@ -1,10 +1,12 @@
-embedder_type: "openai"
-embedder_api_key: "1234567890"
-database_type: "postgres"
-database_url: "postgresql://user:password@localhost:5432/db_name"
-database_api_key: "1234567890"
+embedder:
+  type: "openai"
+  api_key: "some_api_key"
+database:
+  type: "postgres"
+  uri: "data/sample-lancedb"
+  api_key: "1234567890"
 tables:
-  - table_name: "table_1"
+  - name: "table_1"
     columns:
       - name: "column_1"
         type: "text"
@@ -15,7 +17,7 @@ tables:
       - name: "column_3"
         type: "text"
         description: "This is a description of column_3"
-  - table_name: "table_2"
+  - name: "table_2"
     columns:
       - name: "column_4"
         type: "text"
