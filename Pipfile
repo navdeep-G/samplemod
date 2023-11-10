@@ -10,6 +10,8 @@ requests = "*"
 openai = "*"
 python-dotenv = "*"
 lancedb = "*"
+pandas = "*"
+jupyter = "*"
 
 [dev-packages]
 
