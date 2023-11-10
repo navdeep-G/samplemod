@@ -1,0 +1,36 @@
+embedder:
+  type: "openai"
+  api_key: "some_api_key"
+database:
+  type: "postgres"
+  uri: "data/sample-lancedb"
+  api_key: "1234567890"
+tables:
+  - name: "table_1"
+    columns:
+      - name: "column_1"
+        type: "text"
+        description: "This is a description of column_1"
+      - name: "column_2"
+        type: "text"
+        description: "This is a description of column_2"
+      - name: "column_3"
+        type: "text"
+        description: "This is a description of column_3"
+  - name: "table_2"
+    columns:
+      - name: "column_4"
+        type: "text"
+        description: "This is a description of column_4"
+      - name: "column_5"
+        type: "text"
+        description: "This is a description of column_5"
+      - name: "column_6"
+        type: "text"
+        description: "This is a description of column_6"
+embeddings:
+  - name: "user"
+    table: "bigquery-public-data.austin_311.311_service_requests"
+    columns:
+      - name: "unique_key"
+      - name: "complaint_description"

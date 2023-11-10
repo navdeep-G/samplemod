@@ -1,5 +1,5 @@
-init:
-	pip install -r requirements.txt
+install:
+	pipenv install
 
-test:
-	nosetests tests
+run:
+	python3 ./lib/main.py

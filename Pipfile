@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyyaml = "*"
+google-cloud-bigquery = "*"
+requests = "*"
+openai = "*"
+python-dotenv = "*"
+lancedb = "*"
+pandas = "*"
+jupyter = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
